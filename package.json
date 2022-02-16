@@ -10,7 +10,10 @@
   "devDependencies": {
     "@sveltejs/adapter-auto": "next",
     "@sveltejs/kit": "next",
-    "svelte": "^3.44.0"
+    "svelte": "^3.44.0",
+    "svelte-preprocess": "^4.10.1",
+    "coffeescript": "^2.6.1",
+    "vite-plugin-coffee": "^2.2.1"
   },
   "type": "module"
 }
