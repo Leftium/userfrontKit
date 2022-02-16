@@ -1,10 +1,14 @@
 <script context=module>
-import { writable } from 'svelte/store'
+// Userfront configuration.
+let tenantId = null;
+export const toolIds  = {}
 
-// Configure Userfront via Svelte stores.
-export const userfrontId = writable('');
-export const toolIds     = writable({});
-
+export function config(_tenantId, _toolIds) {
+    tenantId = _tenantId;
+    if (_toolIds) {
+        Object.assign(toolIds, _toolIds);
+    }
+}
 </script>
 
 
@@ -56,7 +60,7 @@ addInitCallback(({ tenantId }) => {
   );
 });
 
-Core.init($userfrontId);
+Core.init(tenantId);
 
 registerUrlChangedEventListener();
 if (typeof window === "object") {

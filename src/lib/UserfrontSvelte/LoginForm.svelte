@@ -2,5 +2,5 @@
     import Userfront, { toolIds } from "./Userfront.svelte";
 </script>
 
-<Userfront toolId={$toolIds.login} />
+<Userfront toolId={toolIds.login} />
 

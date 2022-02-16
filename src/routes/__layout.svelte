@@ -1,15 +1,14 @@
 <script>
     import { page } from '$app/stores';
-    import { userfrontId, toolIds } from '$lib/UserfrontSvelte'
+    import { config } from '$lib/UserfrontSvelte'
 
     // Initialize Userfront.
-    $userfrontId = '5nxgg68b'
-    $toolIds = {
+    config('5nxgg68b', {
         signup:        'mrnmra',
         login:         'dnrlnr',
         passwordReset: 'omakml',
         logout:        'adamdl',
-    }
+    });
 
 </script>
 
