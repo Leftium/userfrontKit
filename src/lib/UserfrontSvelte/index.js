@@ -16,6 +16,4 @@ export {
     LogoutButton
 }
 
-let Userfront = Core;
-
-export default Userfront;
+export default Core;
