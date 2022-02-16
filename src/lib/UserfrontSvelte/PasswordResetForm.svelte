@@ -1,5 +1,5 @@
 <script>
-    import UserFront, { userfrontId, toolIds } from "./UserFront.svelte";
+    import Userfront, { userfrontId, toolIds } from "./Userfront.svelte";
 </script>
 
 <UserFront toolId={$toolIds.passwordReset} />

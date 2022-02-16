@@ -1,4 +1,4 @@
-import { userfrontId, toolIds } from './UserFront.svelte'
+import { userfrontId, toolIds } from './Userfront.svelte'
 
 import SignupForm        from './SignupForm.svelte';
 import LoginForm         from './LoginForm.svelte';
