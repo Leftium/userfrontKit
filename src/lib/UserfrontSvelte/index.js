@@ -17,9 +17,6 @@ export {
     LogoutButton
 }
 
-let Userfront = {}
-for (const attr in Core) {
-    if (!Userfront[attr]) Userfront[attr] = Core[attr];
-}
+let Userfront = Core;
 
 export default Userfront;
