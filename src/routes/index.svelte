@@ -1,1 +1,6 @@
-<h1>Home</h1>
+<script>
+    import { SignupForm } from '$lib/UserfrontSvelte'
+</script>
+
+<SignupForm />
+

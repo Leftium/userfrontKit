@@ -1,5 +1,16 @@
 <script>
     import { page } from '$app/stores';
+    import { userfrontId, toolIds } from '$lib/UserfrontSvelte'
+
+    // Initialize Userfront.
+    $userfrontId = '5nxgg68b'
+    $toolIds = {
+        signup:        'mrnmra',
+        login:         'dnrlnr',
+        passwordReset: 'omakml',
+        logout:        'adamdl',
+    }
+
 </script>
 
 <header>

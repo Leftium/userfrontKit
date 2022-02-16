@@ -1,1 +1,6 @@
-<h1>Reset</h1>
+<script>
+    import { PasswordResetForm } from '$lib/UserfrontSvelte'
+</script>
+
+<PasswordResetForm />
+

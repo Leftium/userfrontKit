@@ -1,1 +1,6 @@
-<h1>Login</h1>
+<script>
+    import { LoginForm } from '$lib/UserfrontSvelte'
+</script>
+
+<LoginForm />
+
