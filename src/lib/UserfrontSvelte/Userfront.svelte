@@ -17,8 +17,6 @@ import { onMount } from 'svelte';
 // Props passed to Svelte component.
 export let toolId=null;
 
-Core.init($userfrontId);
-
 const {
   Singleton,
   alias,
@@ -57,6 +55,8 @@ addInitCallback(({ tenantId }) => {
     runAnyModSetup
   );
 });
+
+Core.init($userfrontId);
 
 registerUrlChangedEventListener();
 if (typeof window === "object") {

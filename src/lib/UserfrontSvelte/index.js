@@ -1,3 +1,5 @@
+import Core from "@userfront/core";
+
 import { userfrontId, toolIds } from './Userfront.svelte'
 
 import SignupForm        from './SignupForm.svelte';
@@ -14,3 +16,10 @@ export {
     PasswordResetForm,
     LogoutButton
 }
+
+let Userfront = {}
+for (const attr in Core) {
+    if (!Userfront[attr]) Userfront[attr] = Core[attr];
+}
+
+export default Userfront;
