@@ -14,7 +14,7 @@
             }
         }
 
-        console.log('load@DASHBOARD');
+        console.log('load@DASHBOARD2');
         console.log(JSON.stringify(Userfront.tokens.accessToken, null, 4));
 
         return {};
@@ -25,19 +25,20 @@
 <script>
     import { onMount } from 'svelte';
 
-    console.log('script@DASHBOARD');
+    console.log('script@DASHBOARD2');
     console.log(JSON.stringify(Userfront.tokens.accessToken, null, 4));
 
     onMount( () => {
-        console.log('onMount@DASHBOARD');
+        console.log('onMount@DASHBOARD2');
         console.log(JSON.stringify(Userfront.tokens.accessToken, null, 4));
     });
 </script>
 
 
-<h1>Dashboard</h1>
+<h1>Dashboard2</h1>
 
 Userfront.tokens.accessToken:
 <pre>
     {JSON.stringify(Userfront.tokens.accessToken, null, 4)}
 </pre>
+

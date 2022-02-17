@@ -1,6 +1,9 @@
 <script>
     import { page } from '$app/stores';
-    import { config } from '$lib/UserfrontSvelte'
+    import { browser } from '$app/env';
+
+    import Userfront, { config } from '$lib/UserfrontSvelte'
+
 
     // Initialize Userfront.
     config('5nxgg68b', {
@@ -10,6 +13,12 @@
         logout:        'adamdl',
     });
 
+    if (browser) {
+        window.uf = Userfront;
+    }
+
+
+
 </script>
 
 <header>
@@ -18,6 +27,7 @@
         <li class:active={$page.url.pathname === '/login'}><a href='/login'>Login</a></li>
         <li class:active={$page.url.pathname === '/reset'}><a href='/reset'>Reset</a></li>
         <li class:active={$page.url.pathname === '/dashboard'}><a href='/dashboard'>Dashboard</a></li>
+        <li class:active={$page.url.pathname === '/dashboard2'}><a href='/dashboard2'>Dashboard2</a></li>
     </nav>
 </header>
 
