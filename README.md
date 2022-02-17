@@ -1,6 +1,6 @@
 # UserfrontKit
 
-[Live Demo](https://userfront-kit.vercel.app/)
+**Live Demo:** [userfront-kit.vercel.app](https://userfront-kit.vercel.app/)
 
 This is a port of the Userfront Vue.js/React examples to SvelteKit based on:
 
