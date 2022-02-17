@@ -1,5 +1,5 @@
 <script context="module">
-    import Userfront from '$lib/UserfrontSvelte'
+    import Userfront, { LogoutButton } from '$lib/UserfrontSvelte'
 
     import { browser } from '$app/env'
 
@@ -18,3 +18,5 @@
 </script>
 
 <h1>Dashboard</h1>
+
+<LogoutButton />
