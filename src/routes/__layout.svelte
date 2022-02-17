@@ -1,5 +1,6 @@
 <script context='module'>
     import '../global.css'
+    import 'github-fork-ribbon-css/gh-fork-ribbon.css'
 
     import { page } from '$app/stores';
     import { config } from '$lib/UserfrontSvelte'
@@ -13,8 +14,9 @@
     });
 
 </script>
-
+<a class="github-fork-ribbon" href="https://github.com/Leftium/userfrontKit/" data-ribbon="Fork me on GitHub" title="Fork me on GitHub">Fork me on GitHub</a>
 <header>
+
     <nav>
         <li class:active={$page.url.pathname === '/'}><a href='/'>Home</a></li>
         <li class:active={$page.url.pathname === '/login'}><a href='/login'>Login</a></li>
@@ -27,7 +29,10 @@
     <slot />
 </main>
 
+
+
 <style>
+.github-fork-ribbon:before { background-color: #333; }
 nav {
   list-style: none;
   background-color: #DC322F;
@@ -43,14 +48,14 @@ li {
   border-bottom: 1px solid #888;
 }
 
-a {
+nav a {
   text-decoration: none;
   color: #fff;
   display: block;
   transition: .3s background-color;
 }
 
-a:hover {
+nav a:hover {
   background-color: #fff;
   color: #DC322F;
 }
