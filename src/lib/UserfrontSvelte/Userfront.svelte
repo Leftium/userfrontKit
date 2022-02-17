@@ -1,4 +1,6 @@
 <script context=module>
+import Core from "@userfront/core";
+
 // Userfront configuration.
 let tenantId = null;
 export const toolIds  = {}
@@ -8,13 +10,13 @@ export function config(_tenantId, _toolIds) {
     if (_toolIds) {
         Object.assign(toolIds, _toolIds);
     }
+    Core.init(tenantId);
 }
 </script>
 
 
 <script>
 import AnyMod from "@anymod/core";
-import Core from "@userfront/core";
 
 import { onMount } from 'svelte';
 
@@ -96,4 +98,3 @@ onMount(async () => {
 <div>
     <div id={`userfront-${toolId}`}></div>
 </div>
-

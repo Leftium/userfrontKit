@@ -1,9 +1,8 @@
 <script context='module'>
     import { page } from '$app/stores';
-    import Userfront, { config } from '$lib/UserfrontSvelte'
+    import { config } from '$lib/UserfrontSvelte'
 
-    // Initialize Userfront.
-    Userfront.init('5nxgg68b');
+    // Configure Userfront(Svelte).
     config('5nxgg68b', {
         signup:        'mrnmra',
         login:         'dnrlnr',
