@@ -26,12 +26,6 @@
     <slot />
 </main>
 
-<hr/>
-
-<pre>
-    Userfront.tokens.accessToken: {Userfront.tokens.accessToken}
-</pre>
-
 <style>
     .active {
         font-weight: bold;
