@@ -8,6 +8,7 @@
 
 
     // Initialize Userfront.
+    Userfront.init('5nxgg68b');
     config('5nxgg68b', {
         signup:        'mrnmra',
         login:         'dnrlnr',
@@ -54,4 +55,3 @@
         font-weight: bold;
     }
 </style>
-
