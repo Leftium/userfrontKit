@@ -5,18 +5,12 @@
     import { LoginForm } from '$lib/UserfrontSvelte'
 
     console.log('script@LOGIN');
-    console.log(JSON.stringify(Userfront.tokens.accessToken, null, 4));
+    console.log(Userfront.tokens.accessToken);
 
     onMount( () => {
         console.log('onMount@LOGIN');
-        console.log(JSON.stringify(Userfront.tokens.accessToken, null, 4));
+        console.log(Userfront.tokens.accessToken);
     });
 </script>
 
 <LoginForm />
-
-Userfront.tokens.accessToken:
-<pre>
-    {JSON.stringify(Userfront.tokens.accessToken, null, 4)}
-</pre>
-

@@ -2,6 +2,7 @@
     import { browser } from '$app/env';
 
     import Userfront from '$lib/UserfrontSvelte'
+    import { LogoutButton } from '$lib/UserfrontSvelte'
 
     export function load({ session }) {
         if (browser) {
@@ -15,7 +16,7 @@
         }
 
         console.log('load@DASHBOARD');
-        console.log(JSON.stringify(Userfront.tokens.accessToken, null, 4));
+        console.log(Userfront.tokens.accessToken);
 
         return {};
     }
@@ -26,18 +27,15 @@
     import { onMount } from 'svelte';
 
     console.log('script@DASHBOARD');
-    console.log(JSON.stringify(Userfront.tokens.accessToken, null, 4));
+    console.log(Userfront.tokens.accessToken);
 
     onMount( () => {
         console.log('onMount@DASHBOARD');
-        console.log(JSON.stringify(Userfront.tokens.accessToken, null, 4));
+        console.log(Userfront.tokens.accessToken);
     });
 </script>
 
 
 <h1>Dashboard</h1>
 
-Userfront.tokens.accessToken:
-<pre>
-    {JSON.stringify(Userfront.tokens.accessToken, null, 4)}
-</pre>
+<LogoutButton />

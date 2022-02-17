@@ -9,6 +9,8 @@ export function config(_tenantId, _toolIds) {
         Object.assign(toolIds, _toolIds);
     }
 }
+
+let didInit = false;
 </script>
 
 
@@ -23,8 +25,7 @@ import { browser } from '$app/env';
 // Props passed to Svelte component.
 export let toolId=null;
 
-if (browser) {
-    const {
+const {
       Singleton,
       alias,
       render,
@@ -35,6 +36,29 @@ if (browser) {
       executeCallbacks,
       logErrorsAndTips,
     } = AnyMod;
+
+
+    async function runAnyModSetup() {
+      if (Singleton.isScript1Loading) return;
+      const page = await createOrReturnPage();
+      const updatedPage = await checkPageAndUpdate(page);
+      await processPage(updatedPage);
+      executeCallbacks();
+      logErrorsAndTips();
+    }
+
+    async function mountTools() {
+      try {
+        runAnyModSetup();
+      } catch (err) {
+        let message = err && err.message ? err.message : "Problem loading page";
+        console.warn(message, err);
+      }
+    }
+
+console.log({didInit});
+if (browser && !didInit) {
+    didInit = true;
 
     const { registerUrlChangedEventListener, addInitCallback } = Core;
     alias.setAlias("Userfront");
@@ -69,32 +93,12 @@ if (browser) {
     if (typeof window === "object") {
         window.addEventListener("urlchanged", render);
     }
-
-
-
-    async function runAnyModSetup() {
-      if (Singleton.isScript1Loading) return;
-      const page = await createOrReturnPage();
-      const updatedPage = await checkPageAndUpdate(page);
-      await processPage(updatedPage);
-      executeCallbacks();
-      logErrorsAndTips();
-    }
-
-    async function mountTools() {
-      try {
-        runAnyModSetup();
-      } catch (err) {
-        let message = err && err.message ? err.message : "Problem loading page";
-        console.warn(message, err);
-      }
-    }
+}
 
     onMount(async () => {
         window.addEventListener("urlchanged", render);
         await mountTools();
     });
-}
 </script>
 
 <div>

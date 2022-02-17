@@ -1,4 +1,6 @@
 <script>
+    import { onMount } from 'svelte';
+
     import { page } from '$app/stores';
     import { browser } from '$app/env';
 
@@ -17,6 +19,12 @@
         window.uf = Userfront;
     }
 
+    onMount( () => {
+        console.log('onMount@LAYOUT');
+        console.log(Userfront.tokens.accessToken);
+        Userfront.tokens = Userfront.tokens; // Force reactivity.
+    });
+
 
 
 </script>
@@ -34,6 +42,12 @@
 <main>
     <slot />
 </main>
+
+<hr>
+
+<pre>
+    Userfront.tokens.accessToken: {Userfront.tokens.accessToken}
+</pre>
 
 <style>
     .active {

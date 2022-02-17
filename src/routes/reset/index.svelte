@@ -5,18 +5,12 @@
     import { PasswordResetForm } from '$lib/UserfrontSvelte'
 
     console.log('script@RESET');
-    console.log(JSON.stringify(Userfront.tokens.accessToken, null, 4));
+    console.log(Userfront.tokens.accessToken);
 
     onMount( () => {
         console.log('onMount@RESET');
-        console.log(JSON.stringify(Userfront.tokens.accessToken, null, 4));
+        console.log(Userfront.tokens.accessToken);
     });
 </script>
 
 <PasswordResetForm />
-
-Userfront.tokens.accessToken:
-<pre>
-    {JSON.stringify(Userfront.tokens.accessToken, null, 4)}
-</pre>
-
