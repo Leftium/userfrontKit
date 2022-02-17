@@ -1,8 +1,9 @@
-<script>
+<script context='module'>
     import { page } from '$app/stores';
-    import { config } from '$lib/UserfrontSvelte'
+    import Userfront, { config } from '$lib/UserfrontSvelte'
 
     // Initialize Userfront.
+    Userfront.init('5nxgg68b');
     config('5nxgg68b', {
         signup:        'mrnmra',
         login:         'dnrlnr',
@@ -25,9 +26,14 @@
     <slot />
 </main>
 
+<hr/>
+
+<pre>
+    Userfront.tokens.accessToken: {Userfront.tokens.accessToken}
+</pre>
+
 <style>
     .active {
         font-weight: bold;
     }
 </style>
-
