@@ -14,7 +14,13 @@ This is a port of the Userfront Vue.js/React examples to SvelteKit based on:
 
 ## Usage
 
+Starts a local server:
+
     npm run dev
 
-Starts a local server.
+*Optional steps to get protected API endpoints working:*
 
+1. Set `VITE_USERFRONT_PUBLIC_KEY` environment variable to your own Userfront public key.
+  - Locally: Copy `.env.example` file to `.env.local`, edit file.
+  - Vercel, Netlify, etc: Set `VITE_USERFRONT_PUBLIC_KEY` environment variable in deployment settings.
+2. Rebuild/redeply.
