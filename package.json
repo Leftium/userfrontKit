@@ -14,6 +14,7 @@
     "@userfront/core": "^0.2.41",
     "coffeescript": "^2.6.1",
     "github-fork-ribbon-css": "^0.2.3",
+    "jsonwebtoken": "^8.5.1",
     "svelte": "^3.44.0",
     "svelte-preprocess": "^4.10.1",
     "vite-plugin-coffee": "^2.2.1"

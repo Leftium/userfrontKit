@@ -21,6 +21,7 @@
         <li class:active={$page.url.pathname === '/login'}><a href='/login'>Login</a></li>
         <li class:active={$page.url.pathname === '/reset'}><a href='/reset'>Reset</a></li>
         <li class:active={$page.url.pathname === '/dashboard'}><a href='/dashboard'>Dashboard</a></li>
+        <li class:active={$page.url.pathname === '/api'}><a href='/api'>API</a></li>
     </nav>
 </header>
 
@@ -28,31 +29,9 @@
     <slot />
 </main>
 
-<hr />
-
-<footer>
-
-  <div>
-    Logged in: { !!Userfront.tokens.accessToken }
-  </div>
-
-  <div>
-    Try <a target=_blank href='/api/echo'>API endpoint</a>
-  </div>
-</footer>
-
-
-
 
 <style>
 .github-fork-ribbon:before { background-color: #333; }
-
-footer div {
-  margin: 4px;
-}
-div, li {
-  font-family: sans-serif;
-}
 
 nav {
   list-style: none;
