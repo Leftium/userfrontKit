@@ -1,4 +1,4 @@
-# Userfront SveltKit auth example
+# Userfront SvelteKit auth example
 
 **Live Demo:** [userfront-kit.vercel.app](https://userfront-kit.vercel.app/)
 
