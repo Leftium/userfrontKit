@@ -3,7 +3,7 @@
     import 'github-fork-ribbon-css/gh-fork-ribbon.css'
 
     import { page } from '$app/stores';
-    import { config } from '$lib/UserfrontSvelte'
+    import Userfront, { config } from '$lib/UserfrontSvelte'
 
     // Configure Userfront(Svelte).
     config('5nxgg68b', {
@@ -16,7 +16,6 @@
 </script>
 <a class="github-fork-ribbon" href="https://github.com/Leftium/userfrontKit/" data-ribbon="Fork me on GitHub" title="Fork me on GitHub">Fork me on GitHub</a>
 <header>
-
     <nav>
         <li class:active={$page.url.pathname === '/'}><a href='/'>Home</a></li>
         <li class:active={$page.url.pathname === '/login'}><a href='/login'>Login</a></li>
@@ -29,10 +28,32 @@
     <slot />
 </main>
 
+<hr />
+
+<footer>
+
+  <div>
+    Logged in: { !!Userfront.tokens.accessToken }
+  </div>
+
+  <div>
+    Try <a target=_blank href='/api/echo'>API endpoint</a>
+  </div>
+</footer>
+
+
 
 
 <style>
 .github-fork-ribbon:before { background-color: #333; }
+
+footer div {
+  margin: 4px;
+}
+div, li {
+  font-family: sans-serif;
+}
+
 nav {
   list-style: none;
   background-color: #DC322F;
@@ -41,7 +62,6 @@ nav {
   margin: 0;
 }
 li {
-  font-family: 'Oswald', sans-serif;
   font-size: 1.2em;
   line-height: 40px;
   height: 40px;
