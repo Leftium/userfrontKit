@@ -33,6 +33,10 @@
 <style>
 .github-fork-ribbon:before { background-color: #333; }
 
+header, main {
+  font-family: sans-serif;
+}
+
 nav {
   list-style: none;
   background-color: #DC322F;
