@@ -1,0 +1,321 @@
+.hn-top
+{
+    width: 100%;
+    
+    display: flex;
+
+    z-index: $hn-top-z-index;
+    font-size: $hn-top-font-size;
+}
+
+.hn-top.hn-shadow
+{
+    box-shadow: $hn-top-shadow;
+}
+
+.hn-top.hn-fixed
+{
+    & .hn-mode-content
+    {
+        overflow-y: auto;
+        max-height: calc(100vh - #{$hn-top-height});
+    }
+}
+
+.hn-top 
+{
+    & .hn-nav
+    {
+        z-index: $hn-nav-z-index;
+    }
+    
+    & .hn-item
+    {
+        min-height: $hn-top-item-min-height;
+
+        & .hn-input
+        {
+            width: $hn-top-input-width;
+            min-width: $hn-top-input-width;
+        }
+    }
+
+    & .hn-link
+    {
+        padding-top: $hn-top-link-padding-top;
+        padding-right: $hn-top-link-padding-right;
+        padding-bottom: $hn-top-link-padding-bottom;
+        padding-left: $hn-top-link-padding-left;
+    }
+
+    & .hn-input-active,
+    & .hn-input-default
+    {
+        height: $hn-top-item-min-height;
+    }
+
+    & .hn-section-brand
+    {
+        height: $hn-top-height;
+    }
+
+    & .hn-expand.hn-expand-mega
+    {
+        position: static;
+
+        & > .hn-expand-body
+        {
+            width: 100%;
+
+            & .hn-expand-body
+            {
+                top: 100%;
+                left: 0;
+                width: 100%;
+            }
+
+        }
+    }
+
+    & .hn-expand > .hn-expand-body
+    {
+        top: 0;
+        left: 100%;
+        position: absolute;
+        
+        @include hn-mobile 
+        {
+            position: static;
+            width: 100%;
+        }
+    }
+
+    & .hn-expand > .hn-item > .hn-link
+    {
+        padding-top: $hn-top-expand-link-padding-top;
+        padding-right: $hn-top-expand-link-padding-right;
+        padding-bottom: $hn-top-expand-link-padding-bottom;
+        padding-left: $hn-top-expand-link-padding-left;
+    }
+
+    @include hn-desktop
+    {
+        & .hn-section-body
+        {
+            height: $hn-top-height;
+        }
+
+        & > .hn-nav > .hn-section > .hn-expand > .hn-item.hn-input,
+        & > .hn-nav > .hn-section > .hn-expand > .hn-item > .hn-input
+        {
+            & > .hn-input-default,
+            & > .hn-input-active
+            {
+                height: $hn-top-height;
+            }
+        }
+
+        & > .hn-nav .hn-expand > .hn-expand-body
+        {
+            border: $hn-top-desktop-expand-body-border;
+            background: $hn-top-desktop-expand-body-bg;
+        }
+
+        & > .hn-nav .hn-expand-body
+        {
+            box-shadow: $hn-top-desktop-expand-body-shadow;
+        }
+        & .hn-expand.hn-expand-left > .hn-expand-body
+        {
+            right: 100%;
+            left: auto;
+        }
+
+        & .hn-section > .hn-expand > .hn-expand-body
+        {
+            top: 100%;
+            left: 0%;
+        }
+        
+        & .hn-section > .hn-expand.hn-expand-left > .hn-expand-body
+        {
+            right: 0;
+            left: auto;
+        }
+
+        & .hn-section > .hn-expand.hn-expand-center > .hn-expand-body
+        {
+            left: 50%;
+            transform: translate(-50%, 0);
+        }
+    }
+
+    @include hn-mobile
+    {
+        & .hn-section-body .hn-content
+        {
+            align-items: flex-start;
+        }
+
+
+
+        // Special rules for hn-section-brand, so that dropdown menus are supported on mobile.
+        & .hn-section-brand .hn-expand > .hn-expand-body
+        {
+            top: 0;
+            left: 100%;
+            position: absolute;
+            width: initial;
+        }
+        
+        & > .hn-nav > .hn-section-brand > .hn-expand > .hn-item.hn-input,
+        & > .hn-nav > .hn-section-brand > .hn-expand > .hn-item > .hn-input
+        {
+            & > .hn-input-default,
+            & > .hn-input-active
+            {
+                height: $hn-top-height;
+            }
+        }
+
+        & > .hn-nav .hn-section-brand .hn-expand > .hn-expand-body
+        {
+            border: $hn-top-desktop-expand-body-border;
+            background: $hn-top-desktop-expand-body-bg;
+        }
+
+        & > .hn-nav .hn-section-brand .hn-expand-body
+        {
+            box-shadow: $hn-top-desktop-expand-body-shadow;
+        }
+        & .hn-section-brand .hn-expand.hn-expand-left > .hn-expand-body
+        {
+            right: 100%;
+            left: auto;
+        }
+
+        & .hn-section-brand > .hn-expand > .hn-expand-body
+        {
+            top: 100%;
+            left: 0%;
+        }
+        
+        & .hn-section-brand > .hn-expand.hn-expand-left > .hn-expand-body
+        {
+            right: 0;
+            left: auto;
+        }
+
+        & .hn-section-brand > .hn-expand.hn-expand-center > .hn-expand-body
+        {
+            left: 50%;
+            transform: translate(-50%, 0);
+        }
+    }
+
+    & .hn-icon
+    {
+        justify-content: flex-start;
+        width: $hn-top-icon-width;
+    }
+
+    
+
+    
+}
+
+
+@include hn-desktop
+{
+    // Align items center only for desktop and in
+    // the top bar.
+    .hn-top .hn-content
+    {
+        align-items: center;
+    }
+
+    .hn-top .hn-expand-body .hn-content
+    {
+        align-items: flex-start;
+    }
+
+    // On desktop, allow hn-input within hn-link (the entire button is a link, but looks the same as a split button)
+    // TODO: Generalize also for .hn-side??
+    .hn-top .hn-link 
+    {
+        // Disable hover color changes
+        & .hn-input
+        {
+            color: inherit !important;
+            background: inherit !important;
+        }
+
+        // Set top level hn-input-* height
+        & .hn-input-active,
+        & .hn-input-default
+        {
+            height: calc(var(--hn-top-item-min-height) - var(--hn-top-expand-link-padding-top) - var(--hn-top-expand-link-padding-bottom));
+        }
+    }
+
+    // Sub levels auto height
+    .hn-top .hn-nav > .hn-section > .hn-expand > .hn-item .hn-link
+    {
+        & .hn-input-active,
+        & .hn-input-default
+        {
+            height: auto;
+        }
+    }
+
+    // Align hn-input to top
+    .hn-top .hn-expand .hn-expand .hn-item .hn-link .hn-input
+    {
+        align-self: flex-start;
+    }
+}
+
+@include hn-mobile
+{
+    .hn-top > .hn-nav
+    {
+        flex-direction: column;
+        
+        & > .hn-section-body
+        {
+            flex-direction: inherit;
+        }
+    }
+
+    .hn-top.hn-fixed
+    {
+        & .hn-section-body
+        {
+            overflow-y: auto;
+            max-height: calc(100vh - #{$hn-top-height});
+        }
+    }
+}
+
+@include hn-top-expanded
+{
+    display: block;
+
+    & .hn-hide-expanded
+    {
+        display: none !important;
+    }
+}
+
+@include hn-top-collapsed
+{
+    & > .hn-section-body
+    {
+        display: none;
+    }    
+    .hn-hide-collapsed
+    {
+        display: none !important;
+    }
+}
+

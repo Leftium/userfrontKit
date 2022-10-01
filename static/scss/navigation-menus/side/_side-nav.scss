@@ -1,0 +1,151 @@
+.hn-side
+{
+    max-height: 100%;
+    overflow: auto;
+}
+
+.hn-side.hn-shadow
+{
+    box-shadow: $hn-side-shadow;
+}
+
+.hn-side > .hn-nav
+{
+    display: flex;
+    flex-direction: column;
+
+    font-size: $hn-side-font-size;
+
+    & > .hn-section
+    {
+        flex-direction: inherit;
+    }
+
+    & .hn-item
+    {
+        min-height: $hn-side-item-min-height;
+    }
+
+    & .hn-link
+    {
+        padding-top: $hn-side-link-padding-top;
+        padding-right: $hn-side-link-padding-right;
+        padding-bottom: $hn-side-link-padding-bottom;
+        padding-left: $hn-side-link-padding-left;
+    }
+
+    & .hn-input
+    {
+        & > .hn-input-active,
+        & > .hn-input-default
+        {
+            min-height: $hn-side-item-min-height;
+        }
+    }
+
+    & .hn-input:not(.hn-item)
+    {
+        width: $hn-side-input-width;
+        min-width: $hn-side-input-width;
+    }
+
+    & .hn-expand > .hn-item
+    {
+        position: relative;
+    
+        & > .hn-link
+        {
+            padding-right: #{$hn-side-input-width};
+        }
+    }
+
+    & .hn-expand > .hn-item > .hn-link
+    {
+        padding-top: $hn-side-expand-link-padding-top;
+        padding-right: $hn-side-expand-link-padding-right;
+        padding-bottom: $hn-side-expand-link-padding-bottom;
+        padding-left: $hn-side-expand-link-padding-left;
+    }
+
+    & .hn-icon
+    {
+        width: $hn-side-icon-width;
+    }
+
+    & .hn-expand > .hn-expand-body
+    {
+        position: static;
+        border: none !important;
+        box-shadow: none !important;
+    }
+
+    @include hn-ie11
+    {
+        & .hn-link
+        {
+            flex-grow: 1;
+        }
+
+        & .hn-content
+        {
+            flex-grow: 1;
+        }
+    }
+}
+
+@include hn-side-expanded
+{
+    width: $hn-side-width;
+}
+
+@include hn-side-collapsed 
+{
+    & .hn-expand .hn-item .hn-input
+    {
+        top: 0;
+        right: 0;
+        min-width: 0;
+
+        position: absolute;
+        align-items: center;
+        
+        font-size: $hn-side-collapsed-input-font-size;
+
+        width: $hn-side-collapsed-input-size;
+        height: $hn-side-collapsed-input-size;
+        
+        color: $hn-side-collapsed-input-color;
+        background: $hn-side-collapsed-input-bg;
+    }
+
+    & .hn-expand .hn-input .hn-input-default,
+    & .hn-expand .hn-input .hn-input-active
+    {
+        min-height: 0;
+        
+        margin: $hn-side-collapsed-input-margin;
+        padding: $hn-side-collapsed-input-padding;
+        
+    }
+
+    & .hn-expand .hn-item:hover .hn-input
+    {
+        // Same 1
+        color: $hn-side-collapsed-input-hover-color;
+        background: $hn-side-collapsed-input-hover-bg;
+    }
+
+}
+
+.hn-menu:not(.hn-menu-no-focus)
+{
+    @include hn-side-collapsed 
+    {
+        & .hn-expand .hn-link:focus ~ .hn-input
+        {
+            // Same 1
+            color: $hn-side-collapsed-input-hover-color;
+            background: $hn-side-collapsed-input-hover-bg;
+        }
+    }
+}

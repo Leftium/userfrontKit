@@ -1,0 +1,68 @@
+.hn-mode
+{
+    top: 0;
+    left: 0;
+    width: 100%;
+    
+    display: none;
+    position: absolute;
+    flex-wrap: wrap;
+
+    z-index: $hn-mode-z-index;
+}
+
+.hn-mode-transparent
+{
+    background: transparent;
+}
+
+.hn-mode-top
+{
+    width: 100%;
+    height: $hn-top-height;
+
+    top: 0;
+    left: 0;
+    z-index: 1;
+
+    position: absolute;
+}
+
+.hn-mode-content
+{
+    width: 100%;
+
+    top: $hn-top-height;
+    left: 0;
+    z-index: 0;
+
+    position: absolute;
+
+    & .hn-section-body
+    {
+        height: auto;
+        max-height: calc(100vh - #{$hn-top-height});
+    }
+}
+
+.hn-mode-content.hn-nav
+{
+    flex-direction: column;
+
+    & > .hn-nav,
+    & > .hn-section-body
+    {
+        flex-direction: inherit;
+    }
+}
+
+.hn-mode > .hn-mode-top > .hn-expand > .hn-expand-body
+{
+    top: 100%;
+    left: 0;
+}
+
+.hn-mode > .hn-mode-content .hn-expand > .hn-expand-body
+{
+    position: static;
+}

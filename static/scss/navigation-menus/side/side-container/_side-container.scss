@@ -1,0 +1,58 @@
+.hn-side-container
+{
+    top: 0;
+    left: 0;
+    height: 100%;
+    position: absolute;
+    z-index: $hn-side-container-z-index;
+
+    & .hn-menu
+    {
+        height: 100%;
+        display: none;
+        width: $hn-side-width;
+        z-index: $hn-side-container-nav-z-index;
+    }
+
+    & .hn-overlay
+    {
+        z-index: $hn-side-container-overlay-z-index;
+    }
+}
+
+.hn-side-container-right
+{
+    right: 0;
+    left: unset;
+}
+
+.hn-side-container-top-offset
+{
+    top: $hn-top-height;
+    height: calc(100% - #{$hn-top-height});
+    max-height: calc(100% - #{$hn-top-height});
+    z-index: $hn-side-container-top-offset-z-index;
+
+    & .hn-menu
+    {
+        z-index: $hn-side-container-top-offset-menu-z-index;
+    }
+
+    & .hn-nav
+    {
+        z-index: $hn-side-container-top-offset-nav-z-index;
+    }
+
+    & .hn-overlay
+    {
+        z-index: $hn-side-container-top-offset-overlay-z-index;
+    }
+}
+
+.hn-side-container-fixed
+{
+    position: fixed;
+}
+
+
+

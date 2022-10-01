@@ -1,0 +1,21 @@
+@for $i from 0 through $hn-mode-count - 1
+{
+    .hn-input-state-mode-#{$i}:checked ~ .hn-mode-#{$i}
+    {
+        display: flex;
+    }
+
+    .hn-input-state-mode-#{$i}:checked ~ .hn-nav
+    {
+        & .hn-input-mode-#{$i} .hn-input-default
+        {
+            display: none;
+        }
+
+        & .hn-input-mode-#{$i} .hn-input-active
+        {
+            display: flex;
+        }
+    }
+    
+}

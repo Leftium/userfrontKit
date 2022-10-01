@@ -1,0 +1,23 @@
+@include hn-side-expanded
+{
+    .hn-hide-expanded
+    {
+        display: none !important;
+    }
+}
+
+@include hn-side-collapsed
+{
+    width: auto;
+
+    & .hn-hide-collapsed
+    {
+        display: none !important;
+    }
+
+    & > .hn-section .hn-content
+    {
+        display: none;
+    }
+
+}

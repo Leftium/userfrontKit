@@ -1,0 +1,56 @@
+.hn-input-state
+{
+    top: 110vh;
+    position: fixed;
+}
+
+.hn-input
+{
+    display: flex;
+    justify-content: center;
+    
+    cursor: pointer;
+
+    & > label
+    {
+        cursor: pointer;
+    }
+}
+
+.hn-input:not(.hn-item)
+{
+    align-items: flex-start;
+
+    color: $hn-input-color;
+    background: $hn-input-bg;
+
+    
+}
+
+.hn-input-active
+{
+    display: none;
+}
+
+.hn-input-default
+{
+    display: flex;
+}
+
+
+.hn-item > .hn-input
+{
+    margin-left: auto;
+}
+
+.hn-input-default,
+.hn-input-active
+{
+    flex-grow: 1;
+
+    align-items: center;
+    justify-content: center;
+
+    // IE11 bug fix. The height is overridden in other places.
+    height: 0px;
+}
