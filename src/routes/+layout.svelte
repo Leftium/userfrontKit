@@ -40,7 +40,7 @@
 
 
         // @ts-ignore
-        title = `${PAGES[minor]} (${MODES[major]} Component)`
+        title = `${PAGES[minor]} (${MODES[major]})`
 
         console.log({path, major, minor})
 
@@ -96,7 +96,7 @@
 
             <div class="hn-expand">
                 <!-- A checkbox that controls the dropdown menu. -->
-                <input type="checkbox" class="hn-input-state" id="hn-toolkit" checked={major=='toolkit'}>
+                <input type="radio" name="hn-mode" class="hn-input-state" id="hn-toolkit" checked={major=='toolkit'}>
 
                 <!-- A label that controls the checkbox above. Note the matching ids. -->
                 <label class="hn-item hn-input" for="hn-toolkit" class:hn-active-child={major=='toolkit'}>
@@ -151,7 +151,7 @@
 
             <div class="hn-expand">
                 <!-- A checkbox that controls the dropdown menu. -->
-                <input type="checkbox" class="hn-input-state" id="hn-custom" checked={major=='custom'}>
+                <input type="radio" name="hn-mode" class="hn-input-state" id="hn-custom" checked={major=='custom'}>
 
                 <!-- A label that controls the checkbox above. Note the matching ids. -->
                 <label class="hn-item hn-input" for="hn-custom" class:hn-active-child={major=='custom'}>
@@ -206,7 +206,7 @@
 
             <div class="hn-expand">
                 <!-- A checkbox that controls the dropdown menu. -->
-                <input type="checkbox" class="hn-input-state" id="hn-progressive" checked={major=='progressive'}>
+                <input type="radio" name="hn-mode" class="hn-input-state" id="hn-progressive" checked={major=='progressive'}>
 
                 <!-- A label that controls the checkbox above. Note the matching ids. -->
                 <label class="hn-item hn-input" for="hn-progressive" class:hn-active-child={major=='progressive'}>
