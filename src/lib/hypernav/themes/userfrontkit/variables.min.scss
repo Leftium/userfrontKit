@@ -1,0 +1,112 @@
+/* General variables */
+:root
+{
+    --hn-bg: white;
+    --hn-color: black;
+    --hn-expand-body-bg: white;
+
+    --hn-item-bg: white;
+    --hn-item-color: black;
+    --hn-item-hover-bg: white;
+    --hn-item-hover-color: black;
+
+    --hn-item-active-bg: white;
+    --hn-item-active-color: black;
+    --hn-item-active-hover-bg: white;
+    --hn-item-active-hover-color: black;
+
+    --hn-item-active-child-bg: white;
+    --hn-item-active-child-color: black;
+    --hn-item-active-child-hover-bg: white;
+    --hn-item-active-child-hover-color: black;
+
+    --hn-expand-expanded-item-bg: white;
+    --hn-expand-expanded-item-color: black;
+    --hn-expand-expanded-item-hover-bg: white;
+    --hn-expand-expanded-item-hover-color: black;
+
+    --hn-expand-expanded-item-active-bg: white;
+    --hn-expand-expanded-item-active-color: black;
+    --hn-expand-expanded-item-active-hover-bg: white;
+    --hn-expand-expanded-item-active-hover-color: black;
+
+    --hn-expand-expanded-item-active-child-bg: white;
+    --hn-expand-expanded-item-active-child-color: black;
+    --hn-expand-expanded-item-active-child-hover-bg: white;
+    --hn-expand-expanded-item-active-child-hover-color: black;
+
+    --hn-overlay-bg: rgba(0, 0, 0, 0);
+}
+
+/* Input element variables */
+:root
+{
+    --hn-input-bg: white;
+    --hn-input-color: black;
+    --hn-input-hover-bg: white;
+    --hn-input-hover-color: black;
+    --hn-input-active-bg: white;
+    --hn-input-active-color: black;
+    --hn-input-active-hover-bg: white;
+    --hn-input-active-hover-color: black;
+}
+
+/* Side nav variables */
+:root
+{
+    --hn-side-width: 20rem;
+    --hn-side-icon-width: 2.4rem;
+    --hn-side-font-size: 1.4rem;
+    --hn-side-shadow: 0 0 2rem 0 #000;
+
+    --hn-side-item-min-height: 4rem;
+
+    --hn-side-link-padding-top: 1rem;
+    --hn-side-link-padding-right: 1rem;
+    --hn-side-link-padding-bottom: 1rem;
+    --hn-side-link-padding-left: 1rem;
+
+    --hn-side-expand-link-padding-top: var(--hn-side-link-padding-top);
+    --hn-side-expand-link-padding-right: var(--hn-side-link-padding-right);
+    --hn-side-expand-link-padding-bottom: var(--hn-side-link-padding-bottom);
+    --hn-side-expand-link-padding-left: var(--hn-side-link-padding-bottom);
+
+    --hn-side-input-width: 4rem;
+
+    --hn-side-collapsed-input-size: 1rem;
+    --hn-side-collapsed-input-font-size: 1rem;
+    --hn-side-collapsed-input-margin: 0rem;
+    --hn-side-collapsed-input-padding: 0rem;
+    --hn-side-collapsed-input-bg: red;
+    --hn-side-collapsed-input-color: white;
+
+    --hn-side-nesting-indentation: 1rem;
+}
+
+/*Top nav variables */
+:root
+{
+    --hn-top-height: 5rem;
+    --hn-top-icon-width: 2.4rem;
+    --hn-top-font-size: 1.6rem;
+    --hn-top-shadow: 0px 0rem 1rem 0px #000;
+
+    --hn-top-item-min-height: 4rem;
+
+    --hn-top-link-padding-top: 1rem;
+    --hn-top-link-padding-right: 1rem;
+    --hn-top-link-padding-bottom: 1rem;
+    --hn-top-link-padding-left: 1rem;
+
+    --hn-top-expand-link-padding-top: var(--hn-top-link-padding-top);
+    --hn-top-expand-link-padding-right: 0.4rem;
+    --hn-top-expand-link-padding-bottom: var(--hn-top-link-padding-bottom);
+    --hn-top-expand-link-padding-left: var(--hn-top-link-padding-bottom);
+
+    --hn-top-input-width: 3rem;
+
+    --hn-top-nesting-indentation: 1rem;
+    --hn-top-desktop-expand-body-bg: var(--hn-bg);
+    --hn-top-desktop-expand-body-border: thin solid black;
+    --hn-top-desktop-expand-body-shadow: 0 0.2rem 0.2rem rgba(0, 0, 0, 0.4), -0.2rem 0.2rem 0.4rem rgba(0, 0, 0, 0.4), 0.2rem 0.2rem 0.4rem rgba(0, 0, 0, 0.4);
+}

@@ -1,7 +1,7 @@
 <script>
     import "../app.scss";
     import '$lib/hypernav/hyper-nav.min.scss'
-    import '$lib/hypernav/themes/default/variables.min.scss'
+    import '$lib/hypernav/themes/userfrontkit/variables.min.scss'
 
     import Fa from 'svelte-fa'
     import { faBars, faXmark, faChevronDown, faChevronUp } from '@fortawesome/free-solid-svg-icons'
@@ -294,19 +294,21 @@
             visibility: visible;
         }
 
-        .hn-top>.hn-nav .hn-expand-body {
-            box-shadow: none;
-        }
-
     }
 
-    .hn-menu:not(.hn-menu-no-focus) .hn-item:not(.hn-item-disabled):focus, .hn-menu:not(.hn-menu-no-focus) .hn-item:not(.hn-item-disabled)>.hn-link:focus {
-        color: inherit !important;
-        background: inherit !important;
+    .hn-expand > .hn-input-state ~ label span
+    {
+        background-color: lightgray;
+        color: white;
     }
 
-    .hn-item:not(.hn-item-disabled):hover, .hn-item:not(.hn-item-disabled):hover>.hn-link {
-        color: inherit !important;
-        background: inherit !important;
+    .hn-expand > .hn-input-state ~ label.hn-active-child span
+    {
+        background-color: #5e72e4;
+        font-weight: bold;
+    }
+
+    div.hn-item.hn-active {
+        font-weight: 900;
     }
 </style>
