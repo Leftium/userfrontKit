@@ -3,36 +3,36 @@
 {
     --hn-bg: white;
     --hn-color: black;
-    --hn-expand-body-bg: white;
+    --hn-expand-body-bg: (--hn-bg);
 
-    --hn-item-bg: white;
+    --hn-item-bg: var(--hn-bg);
     --hn-item-color: black;
-    --hn-item-hover-bg: white;
+    --hn-item-hover-bg: var(--hn-bg)
     --hn-item-hover-color: black;
 
-    --hn-item-active-bg: white;
+    --hn-item-active-bg: var(--hn-bg);
     --hn-item-active-color: black;
-    --hn-item-active-hover-bg: white;
+    --hn-item-active-hover-bg: (--hn-bg);
     --hn-item-active-hover-color: black;
 
-    --hn-item-active-child-bg: white;
+    --hn-item-active-child-bg: var(--hn-bg);
     --hn-item-active-child-color: black;
-    --hn-item-active-child-hover-bg: white;
+    --hn-item-active-child-hover-bg: var(--hn-bg);;
     --hn-item-active-child-hover-color: black;
 
-    --hn-expand-expanded-item-bg: white;
+    --hn-expand-expanded-item-bg: var(--hn-bg);
     --hn-expand-expanded-item-color: black;
-    --hn-expand-expanded-item-hover-bg: white;
+    --hn-expand-expanded-item-hover-bg: var(--hn-bg);
     --hn-expand-expanded-item-hover-color: black;
 
-    --hn-expand-expanded-item-active-bg: white;
+    --hn-expand-expanded-item-active-bg: var(--hn-bg);
     --hn-expand-expanded-item-active-color: black;
-    --hn-expand-expanded-item-active-hover-bg: white;
+    --hn-expand-expanded-item-active-hover-bg: var(--hn-bg);
     --hn-expand-expanded-item-active-hover-color: black;
 
-    --hn-expand-expanded-item-active-child-bg: white;
+    --hn-expand-expanded-item-active-child-bg: var(--hn-bg);
     --hn-expand-expanded-item-active-child-color: black;
-    --hn-expand-expanded-item-active-child-hover-bg: white;
+    --hn-expand-expanded-item-active-child-hover-bg: var(--hn-bg);
     --hn-expand-expanded-item-active-child-hover-color: black;
 
     --hn-overlay-bg: rgba(0, 0, 0, 0);
@@ -41,13 +41,13 @@
 /* Input element variables */
 :root
 {
-    --hn-input-bg: white;
+    --hn-input-bg: var(--hn-bg);
     --hn-input-color: black;
-    --hn-input-hover-bg: white;
+    --hn-input-hover-bg: var(--hn-bg);
     --hn-input-hover-color: black;
-    --hn-input-active-bg: white;
+    --hn-input-active-bg: var(--hn-bg);
     --hn-input-active-color: black;
-    --hn-input-active-hover-bg: white;
+    --hn-input-active-hover-bg: var(--hn-bg);
     --hn-input-active-hover-color: black;
 }
 
@@ -88,7 +88,7 @@
 {
     --hn-top-height: 5rem;
     --hn-top-icon-width: 2.4rem;
-    --hn-top-font-size: 1.6rem;
+    --hn-top-font-size: 1.4rem;
     --hn-top-shadow: 0px 0rem 1rem 0px #000;
 
     --hn-top-item-min-height: 4rem;
@@ -107,6 +107,6 @@
 
     --hn-top-nesting-indentation: 1rem;
     --hn-top-desktop-expand-body-bg: var(--hn-bg);
-    --hn-top-desktop-expand-body-border: thin solid black;
-    --hn-top-desktop-expand-body-shadow: 0 0.2rem 0.2rem rgba(0, 0, 0, 0.4), -0.2rem 0.2rem 0.4rem rgba(0, 0, 0, 0.4), 0.2rem 0.2rem 0.4rem rgba(0, 0, 0, 0.4);
+    --hn-top-desktop-expand-body-border: none;
+    --hn-top-desktop-expand-body-shadow: -1px 1px 1px -1px black, 1px 1px 1px -1px black, 0px 0px 4px -1px black;
 }
