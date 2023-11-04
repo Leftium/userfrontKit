@@ -1,3 +1,16 @@
+# This example has been deprecated!
+
+Please see latest version at: https://github.com/Leftium/userfront-svelte
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
 # Userfront SvelteKit auth example
 
 **Live Demo:** [userfront-kit.vercel.app](https://userfront-kit.vercel.app/)
